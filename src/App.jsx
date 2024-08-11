@@ -7,7 +7,9 @@ function App() {
     <div className="App">
       <Header/>
       <main className="main-content">
-        {/* Contenido principal */}
+        <h1>
+          Bienvenido a Nómada
+        </h1>
       </main>
       <Footer/>
     </div>

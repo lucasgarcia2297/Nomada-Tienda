@@ -1,17 +1,30 @@
-#root {
-  --primary-color: #8E8B6B; /* Moss Green */
-  --secondary-color: #A6AA8A; /* Sage */
-  --accent-color: #ECD495; /* Peach Yellow */
-  --background-color: #C19C81; /* Lion */
-  --text-color: #936B47; /* Raw Umber */
-  --logo-color: #000000; /* Black from logo */
-  --logo-background: #f1eee8  ; /* White from logo */
-}
 *{
   list-style: none;
   margin: 0px;
 
 }
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: 0px;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.main-content{
+  flex: 1;
+  margin-top: 100px;
+}
 li{
   list-style: none;
+}
+
+@media (min-width: 980px){
+  .main-content{
+    margin-top: 150px;
+  }
 }
