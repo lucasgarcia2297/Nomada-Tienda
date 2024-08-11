@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lovadelic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vintage+Dreams&display=swap');
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -65,4 +69,22 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+:root {
+  --font-primary: 'Old Standard TT', serif;
+  --font-secondary: 'Lovadelic', cursive;
+  --font-accent: 'Vintage Dreams', sans-serif;
+}
+
+body {
+  font-family: var(--font-primary);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-secondary);
+}
+
+button, a {
+  font-family: var(--font-accent);
 }

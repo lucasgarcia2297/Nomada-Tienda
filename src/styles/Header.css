@@ -1,0 +1,133 @@
+/*================== GENERALES (MOBILE) ==================*/
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--logo-background);
+  color: var(--logo-color);
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; 
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-button, .cart-button, .login-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-img {
+  width: 100px; 
+  height: auto;
+}
+
+.header-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.form-search{
+  align-self: bottom;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 10px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px 0 0 4px;
+}
+
+.search-button {
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: var(--logo-background);
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.navbar {
+  display: none;
+}
+/*=============================================*/
+
+/*================== TABLET ==================*/
+@media (min-width: 768px) {
+  .header-icons {
+    display: flex;
+  }
+
+  .login-button {
+    display: inline-block;
+  }
+}
+/*=============================================*/
+
+/*================== DESKTOP ==================*/
+@media (min-width: 980px) {
+  .header {
+    padding: 20px;
+  }
+  .header-top {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .form-search{
+    display: flex;
+    flex: 1;
+    margin-left: 20px;
+  }
+  .logo-img {
+    width: 150px;
+  }
+
+  .search-input {
+    padding: 15px;
+  }
+
+  .search-button {
+    padding: 15px;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .navbar {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .navbar ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+  }
+
+  .navbar li {
+    margin: 0 10px;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: var(--font-primary);
+  }
+}
