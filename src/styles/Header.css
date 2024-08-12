@@ -65,7 +65,7 @@
 .form-search {
   display: flex;
   width: 100%;
-  max-width: 600px;
+  max-width: 770px;
   margin: 0 auto;
 }
 
@@ -93,7 +93,7 @@
 /*=============================================*/
 
 /*================== TABLET ==================*/
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .header-top {
     flex-wrap: nowrap;
   }
@@ -116,11 +116,37 @@
   .login-button {
     display: inline-block;
   }
+
+  .navbar {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .navbar ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+  }
+
+  .navbar li {
+    margin: 0 10px;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: var(--font-primary);
+  }
+  .menu-button {
+    display: none;
+  }
 }
 /*=============================================*/
 
+
 /*================== DESKTOP ==================*/
-@media (min-width: 980px) {
+@media (min-width: 1280px) {
   .header {
     padding: 10px;
   }
@@ -150,29 +176,7 @@
     width: 150px;
   }
 
-  .menu-button {
-    display: none;
-  }
+  
 
-  .navbar {
-    display: block;
-    margin-top: 10px;
-  }
-
-  .navbar ul {
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-    padding: 0;
-  }
-
-  .navbar li {
-    margin: 0 10px;
-  }
-
-  .navbar a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-family: var(--font-primary);
-  }
+  
 }
