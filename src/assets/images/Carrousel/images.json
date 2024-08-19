@@ -1,0 +1,20 @@
+{
+  "carouselImages": [
+    {
+      "name": "Portada Indumentaria femenina",
+      "url": "/src/assets/images/Carrousel/Portada Indumentaria femenina.webp"
+    },
+    {
+      "name": "Portada Moda Minimalista Crema",
+      "url": "/src/assets/images/Carrousel/Portada Moda Minimalista Crema.webp"
+    },
+    {
+      "name": "Portada Moda Minimalista Blanco",
+      "url": "/src/assets/images/Carrousel/Portada Moda Minimalista Blanco.webp"
+    },
+    {
+      "name": "Portada Moda urbana",
+      "url": "/src/assets/images/Carrousel/Portada Moda urbana.webp"
+    }
+  ]
+}

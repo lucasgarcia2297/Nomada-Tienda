@@ -1,5 +1,5 @@
 import '../styles/Header.css';
-import { IconMenu, IconCart, IconUser } from './Icons';
+import { IconMenu, IconCart, IconUser, IconSearch } from './Icons';
 import Logo from '../assets/Logo_Nómada.svg';
 
 export const Header = () => {
@@ -15,7 +15,7 @@ export const Header = () => {
         <div className="search-container">
           <form className="form-search">
             <input type="text" className="search-input" placeholder="Buscar productos..." />
-            <button className="search-button" type='search'>Buscar</button>
+            <button className="search-button" type='search'><IconSearch/></button>
           </form>
         </div>
         <div className="header-icons">
