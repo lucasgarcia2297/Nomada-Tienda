@@ -15,23 +15,31 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  border-radius: 0%;
+  color: rgb(255,255,255,0.5);
   border: none;
   padding: 10px;
   cursor: pointer;
+  height: 100%;
+}
+.btn-left {
+  background: linear-gradient(to right, #000, rgb(0,0,0,0.0));
+}
+.btn-right {
+  background: linear-gradient(to left, #000, rgb(0,0,0,0.0));
 }
 
 .btn-carrousel:hover {
+  transition: all 200ms ease-in;
   background-color: rgba(0, 0, 0, 0.8);
 }
 
 .btn-carrousel:first-of-type {
-  left: 16px;
+  left: 0px;
 }
 
 .btn-carrousel:last-of-type {
-  right: 16px;
+  right: 0px;
 }
 .indicators {
   position: absolute;

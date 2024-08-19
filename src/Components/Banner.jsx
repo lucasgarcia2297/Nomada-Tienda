@@ -31,13 +31,13 @@ export function Banner() {
 
   return (
     <div className="banner">
-      {imagesCarrousel.length > 1 && <button className='btn-carrousel' onClick={handlePrev}><IconPrev/></button>}
+      {imagesCarrousel.length > 1 && <button className='btn-carrousel btn-left' onClick={handlePrev}><IconPrev/></button>}
       <img
         src={imagesCarrousel[currentIndex].url}
         alt={imagesCarrousel[currentIndex].name}
         className="banner-image"
       />
-      {imagesCarrousel.length > 1 && <button className='btn-carrousel' onClick={handleNext}><IconNext/></button>}
+      {imagesCarrousel.length > 1 && <button className='btn-carrousel btn-right' onClick={handleNext}><IconNext/></button>}
       <div className="indicators">
         {imagesCarrousel.map((_, index) => (
           <span
