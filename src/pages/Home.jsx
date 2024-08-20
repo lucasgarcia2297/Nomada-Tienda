@@ -3,9 +3,10 @@ import '../styles/Home.css';
 import { products as initialProducts } from '../mocks/products.json';
 import image from '../assets/images/default-image.png';
 import { Banner } from '../Components/Banner.jsx';
+import { Link } from "react-router-dom";
 
 
-export function Home() {
+function Home() {
   const [products, setProducts] = useState(initialProducts);
  
 
@@ -22,6 +23,7 @@ export function Home() {
                 <strong>{product.name}</strong>
                 <img src={image} alt={product.name} />
                 <p>${product.price}</p>
+                <button className="btn-details"><Link to={`/products/${product.id}`}>Ver detalles</Link></button>
               </article>
             </li>
           ))}
@@ -30,3 +32,5 @@ export function Home() {
     </main>
   );
 }
+
+export default Home;

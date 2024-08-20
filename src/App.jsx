@@ -1,14 +1,14 @@
 import './App.css'
 import { Header } from './Components/Header.jsx';
 import { Footer } from './Components/Footer.jsx';
-import { Home } from './pages/Home.jsx';
+import { Outlet } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
       <Header/>
       <main className="main-content">
-        <Home/>
+        <Outlet/>
       </main>
       <Footer/>
     </div>
