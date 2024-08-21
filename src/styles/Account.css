@@ -1,0 +1,72 @@
+.container{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.7)), url("/images/background-image-userAccount.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.register-container, .login-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 20px;
+  background:rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid gray;
+  border-radius: 8px;
+  min-width: 200px;
+  max-width: 400px;
+  height: auto;
+
+}
+.register-form{
+  display: flex;
+  flex-direction: column;
+}
+
+.container section{
+  padding: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.container section label {
+  flex: 0 0 auto;
+  padding-right: 4px;
+  font-size: 1em;
+}
+.container section input {
+  flex: 1 1 auto;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  padding: 4px;
+  font-size: 1em;
+}
+
+.btn-conteiner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.btn-conteiner button{
+  flex: 1 1 auto;
+  background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+  padding: 10px;
+  color: var(--logo-background);
+}
+.btn-conteiner button:hover{
+  background: linear-gradient(to bottom, var(--accent-color),var(--background-color));
+}
+
+.btn-conteiner a{
+  list-style: none;
+}

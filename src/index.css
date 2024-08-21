@@ -52,13 +52,13 @@ button:focus-visible {
   --font-secondary: 'Lovadelic', cursive;
   --font-accent: 'Vintage Dreams', sans-serif;
 
-  --primary-color: #6E7D57; /* Moss Green */
-  --secondary-color: #B5C0A1; /* Sage */
-  --accent-color: #ECD495; /* Peach Yellow */
-  --background-color: #C19C81; /* Lion */
-  --text-color: #714925; /* Raw Umber */
-  --logo-color: #000000; /* Black from logo */
-  --logo-background: #f1eee8  ; /* White from logo */
+  --primary-color: #5a3d34; 
+  --secondary-color: #301e1a; 
+  --accent-color: #a26d54; 
+  --background-color: #C19C81; 
+  --text-color: #714925; 
+  --logo-color: #000; 
+  --logo-background: #f1eee8; 
 }
 
 body {
@@ -71,4 +71,9 @@ h1, h2, h3 {
 
 button, a {
   font-family: var(--font-accent);
+}
+
+button{
+  background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+  color: var(--logo-background);
 }
