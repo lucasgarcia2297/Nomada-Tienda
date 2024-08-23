@@ -1,10 +1,21 @@
+import { useForm } from '../hooks/useForm';
 import '../styles/Account.css';
 import { Link } from 'react-router-dom';
 
 function Login() {
+  const initialValues = {
+    email:'',
+    password:''
+  }
+  const { values, handleChange, resetForm } = useForm({initialValues}); 
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log('Datos de inicio de sesión', values);
+    resetForm();
   }
+
+
   return (
     <div className="container">
       <div className="login-container">
@@ -14,7 +25,9 @@ function Login() {
             <label htmlFor="email">Correo Electrónico:</label>
             <input
               type="email"
-              id="email"
+              name="email"
+              value={values.email}
+              onChange={handleChange}
               required
             />
           </section>
@@ -22,7 +35,9 @@ function Login() {
             <label htmlFor="password">Contraseña:</label>
             <input
               type="password"
-              id="password"
+              name="password"
+              value={values.password}
+              onChange={handleChange}
               required
             />
           </section>

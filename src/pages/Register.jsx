@@ -1,27 +1,24 @@
-import { useState } from "react";
+import { useForm } from "../hooks/useForm.js";
 import '../styles/Account.css'
 import { Link } from "react-router-dom";
+import  {validations}  from '../../public/js/validations.js'
 
 function Register() {
-  const [formData, setFormData] = useState({
+  const initialValues = {
     fistName: '',
     lastName: '',
     birthDate: '',
     email: '',
     password: ''
-  });
-  const [errors, setErrors] = useState({});
-
-  const handleSubmit = (e) => {
-    const { id, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [id]: value
-    }));
   };
 
-  const handleChange = (e) => {
+  const {values, errors, handleChange, resetForm } = useForm({initialValues});
+
+
+  const handleSubmit = (e) => {
     e.preventDefault();
+    console.log('Datos del registro', values);
+    resetForm();
 
 
   }
@@ -35,8 +32,8 @@ function Register() {
             <label htmlFor="fistName">Nombre:</label>
             <input
               type='text'
-              id='fistName'
-              value={formData.fistName}
+              name='fistName'
+              value={values.fistName}
               onChange={handleChange}
               placeholder="Juan"
               required
@@ -46,8 +43,8 @@ function Register() {
             <label htmlFor="lastName">Apellido:</label>
             <input
               type='text'
-              id='lastName'
-              value={formData.lastName}
+              name='lastName'
+              value={values.lastName}
               onChange={handleChange}
               placeholder="Perez"
               required
@@ -57,8 +54,8 @@ function Register() {
             <label htmlFor="email">Correo Electrónico:</label>
             <input
               type="email"
-              id="email"
-              value={formData.email}
+              name="email"
+              value={values.email}
               onChange={handleChange}
               required
             />
@@ -67,8 +64,8 @@ function Register() {
             <label htmlFor="birthDate">Fecha de nacimiento:</label>
             <input
               type="date"
-              id="birthDate"
-              value={formData.birthDate}
+              name="birthDate"
+              value={values.birthDate}
               onChange={handleChange}
               required
             />
@@ -77,8 +74,8 @@ function Register() {
             <label htmlFor="password">Contraseña:</label>
             <input
               type="password"
-              id="password"
-              value={formData.password}
+              name="password"
+              value={values.password}
               onChange={handleChange}
               required
             />
