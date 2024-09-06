@@ -43,7 +43,7 @@ function Login() {
           </section>
           <section className='btn-conteiner'>
             <button type="submit">Iniciar sesión</button>
-            <p>¿No tenés cuenta aún?<Link to='/register'>Crear cuenta</Link></p>
+            <p>¿No tienes una cuenta aún? <Link to='/register'>Creá tu cuenta</Link></p>
           </section>
         </form>
       </div>

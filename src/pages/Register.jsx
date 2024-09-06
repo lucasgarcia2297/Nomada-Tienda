@@ -1,7 +1,6 @@
 import { useForm } from "../hooks/useForm.js";
 import '../styles/Account.css'
 import { Link } from "react-router-dom";
-import  {validations}  from '../../public/js/validations.js'
 
 function Register() {
   const initialValues = {
@@ -12,7 +11,7 @@ function Register() {
     password: ''
   };
 
-  const {values, errors, handleChange, resetForm } = useForm({initialValues});
+  const {values, handleChange, resetForm } = useForm({initialValues});
 
 
   const handleSubmit = (e) => {
@@ -79,11 +78,11 @@ function Register() {
               onChange={handleChange}
               required
             />
-            {errors.password && <span className="error">{errors.password}</span>}
+            {/* {errors.password && <span className="error">{errors.password}</span>} */}
           </section>
           <section className="btn-conteiner">
             <button type="submit">Crear cuenta</button>
-            <p>¿Ya tienes una cuenta?<Link to='/login'>Iniciar Sesión</Link></p>
+            <p>¿Ya tienes una cuenta? <Link to='/login'>Inicia sesión</Link></p>
             </section>
         </form>
       </div>
