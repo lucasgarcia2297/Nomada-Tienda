@@ -4,23 +4,29 @@ import { Link } from "react-router-dom";
 
 function Register() {
   const initialValues = {
-    fistName: '',
+    firstName: '',
     lastName: '',
     birthDate: '',
     email: '',
     password: ''
   };
 
-  const {values, handleChange, resetForm } = useForm({initialValues});
-
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Datos del registro', values);
-    resetForm();
-
-
+  const onValidate = (values) => {
+    let isError = false;
+    const errors = {};
+    
+    if(!values.firstName.trim()){
+      errors.firstName = "El nombre no debe estar vacío.";
+      isError = true;
+    }
+    if(!values.lastName.trim()){
+      errors.lastName = "El apellido no debe estar vacío.";
+      isError = true;
+    }
+    return isError ? errors : null;
   }
+
+  const {values,errors, handleChange, handleSubmit } = useForm({initialValues, onValidate});
 
   return (
     <div className="container">
@@ -28,15 +34,15 @@ function Register() {
         <h2>Registro de usuario</h2>
         <form className='register-form' onSubmit={handleSubmit} action="">
           <section>
-            <label htmlFor="fistName">Nombre:</label>
+            <label htmlFor="firstName">Nombre:</label>
             <input
               type='text'
-              name='fistName'
-              value={values.fistName}
+              name='firstName'
+              value={values.firstName}
               onChange={handleChange}
-              placeholder="Juan"
-              required
+              placeholder="Ej: Juan"
             />
+            {errors.firstName &&<div className="error-message">{errors.firstName}</div>}
           </section>
           <section>
             <label htmlFor="lastName">Apellido:</label>
@@ -45,8 +51,8 @@ function Register() {
               name='lastName'
               value={values.lastName}
               onChange={handleChange}
-              placeholder="Perez"
-              required
+              placeholder="Ej: Perez"
+              // required
             />
           </section>
           <section>
@@ -56,7 +62,8 @@ function Register() {
               name="email"
               value={values.email}
               onChange={handleChange}
-              required
+              placeholder="Ej: juanperez@mail.com"
+              // required
             />
           </section>
           <section>
@@ -66,7 +73,7 @@ function Register() {
               name="birthDate"
               value={values.birthDate}
               onChange={handleChange}
-              required
+              // required
             />
           </section>
           <section>
@@ -76,7 +83,7 @@ function Register() {
               name="password"
               value={values.password}
               onChange={handleChange}
-              required
+              // required
             />
             {/* {errors.password && <span className="error">{errors.password}</span>} */}
           </section>

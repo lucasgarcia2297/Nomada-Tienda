@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-export const useForm = ({initialValues,validations}) => {
+export const useForm = ({initialValues,onValidate}) => {
   const [values, setValues ] = useState(initialValues);
-  const [errors, setErrors] = useState(null);
+  const [errors, setErrors] = useState({});
 
 
   const handleChange = (e) => {
@@ -11,6 +11,17 @@ export const useForm = ({initialValues,validations}) => {
       ...values,
       [name]:value
     });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const err = onValidate(values);
+    if(err == null){
+      console.log('Enviando formulario...');
+      resetForm();
+    }else{
+      setErrors(err);
+    }
+    console.log('Datos del registro', values);
   };
 
   const resetForm = () => {
@@ -21,6 +32,6 @@ export const useForm = ({initialValues,validations}) => {
     values,
     errors,
     handleChange,
-    resetForm
+    handleSubmit
   };
 }
