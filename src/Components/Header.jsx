@@ -1,6 +1,6 @@
 import '../styles/Header.css';
 import { IconMenu, IconCart, IconUser, IconSearch, IconArrowDownDouble } from './Icons';
-import Logo from '../assets/Logo_Nómada.svg';
+import Logo from '/Logo_Nómada.svg';
 import { Link } from 'react-router-dom';
 
 export const Header = () => {
